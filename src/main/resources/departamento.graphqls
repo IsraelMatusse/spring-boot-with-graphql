@@ -1,0 +1,26 @@
+schema{
+    query: Query
+    mutation: Mutation
+}
+
+type Query{
+    getAllDepartamento : [Departamento]
+}
+type Mutation{
+    createDepartamento(input: DepartamentoInput):Departamento
+}
+input DepartamentoInput{
+    codigo: String
+    designacao: String
+    objectivo: String
+    endereco:String
+}
+
+type Departamento{
+    id: String
+    codigo: String
+    designacao: String
+    objectivo: String
+    endereco:String
+
+}
