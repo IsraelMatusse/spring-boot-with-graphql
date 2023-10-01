@@ -1,9 +1,10 @@
-
 type Query{
     getAllDepartamento : [Departamento]
+    getCursos: [Curso]
 }
 type Mutation{
     createDepartamento(input: DepartamentoInput):Departamento
+    createCurso(input: cursoInput):Curso
 }
 
 input DepartamentoInput{
@@ -14,10 +15,23 @@ input DepartamentoInput{
 }
 
 type Departamento{
-    id: String
+    id: ID
     codigo: String
     designacao: String
     objectivo: String
     endereco:String
+}
 
+input cursoInput{
+    designacao:String
+    descricao:String
+    codigoCurso:String
+    departamentoId:ID!
+}
+type Curso{
+    id:ID
+    designacao:String
+    descricao:String
+    codigoCurso:String
+    departamento:[Departamento]
 }

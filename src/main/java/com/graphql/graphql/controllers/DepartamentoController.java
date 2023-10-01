@@ -34,7 +34,7 @@ public class DepartamentoController {
     private DepartamentoService departamentoService;
     @Autowired
     private DepartamentoRepo departamentoRepo;
-    @Value("classpath:departamento.graphqls")
+    @Value("classpath:graphql.graphqls")
     private Resource schemaResource;
 
     private GraphQL graphQL;

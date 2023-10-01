@@ -19,7 +19,7 @@ type Curso{
     departamento:[DepartamentoCurso]
 }
 type DepartamentoCurso{
-    id: String
+    id: ID
     codigo: String
     designacao: String
     objectivo: String
