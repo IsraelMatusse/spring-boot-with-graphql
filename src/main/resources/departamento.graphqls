@@ -1,12 +1,12 @@
 schema{
-    query: Query
-    mutation: Mutation
+    query: getDepartamento
+    mutation: addDepartamento
 }
 
-type Query{
+type getDepartamento{
     getAllDepartamento : [Departamento]
 }
-type Mutation{
+type addDepartamento{
     createDepartamento(input: DepartamentoInput):Departamento
 }
 input DepartamentoInput{

@@ -1,0 +1,28 @@
+type Query{
+    getCursos: [Curso]
+}
+type Mutation{
+    createCurso(input: cursoInput):Curso
+}
+
+input cursoInput{
+    designacao:String
+    descricao:String
+    codigoCurso:String
+    departamento:ID!
+}
+type Curso{
+    id:ID
+    designacao:String
+    descricao:String
+    codigoCurso:String
+    departamento:[DepartamentoCurso]
+}
+type DepartamentoCurso{
+    id: String
+    codigo: String
+    designacao: String
+    objectivo: String
+    endereco:String
+
+}

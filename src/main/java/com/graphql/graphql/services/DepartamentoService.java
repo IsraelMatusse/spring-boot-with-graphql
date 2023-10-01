@@ -18,7 +18,7 @@ public class DepartamentoService {
     public List<Departamento> listarTodos(){
         return departamentoRepo.findAll();
     }
-    public Departamento buscarPorId(String id){
+    public Departamento buscarPorId(Long id){
         return departamentoRepo.findById(id).orElse(null);
     }
 
